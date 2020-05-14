@@ -1,1 +1,5 @@
-<h1>Welcome to the signup page</h1>
+<%= form_for @user do |f| %> 
+Username: <%= f.text_field :name, placeholder: 'Your name here' %><br><br>
+E-mail : <%= f.email_field :email, placeholder: 'example@example.com' %><br><br>
+<%= f.submit %>
+<% end %> 

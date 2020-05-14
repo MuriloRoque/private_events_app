@@ -1,1 +1,4 @@
-<h1>Welcome to the login page!!!</h1>
+<%= form_for @user do |f| %> 
+E-mail : <%= f.email_field :email, placeholder: 'example@example.com' %><br><br>
+<%= f.submit %>
+<% end %> 
