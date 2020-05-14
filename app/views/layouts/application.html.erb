@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to root_path do %>
+          <h1>Home</h1>
+      <% end %>
+      <%= link_to login_path do %>
+          <h2>Sign in</h2>
+      <% end %>
+      <%= link_to new_user_path do %>
+          <h2>Sign up</h2>
+      <% end %>
+      <a href="">Create Events</a>
+      <a href="">Show events</a>
+      <a href="">My profile</a>
+    </nav>
     <%= yield %>
   </body>
 </html>
