@@ -1,0 +1,5 @@
+<%= form_for @event do |f| %> 
+Date: <%= f.date_field :date, placeholder: "Your event's date" %><br><br>
+Description : <%= f.text_field :description, placeholder: 'Your description' %><br><br>
+<%= f.submit %>
+<% end %> 
