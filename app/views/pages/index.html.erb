@@ -1,1 +1,4 @@
-    <h1>Welcome to our webpage, <%= current_user.name %>!</h1>
+    <% if current_user %>
+     <h1>Welcome to our webpage, <%= current_user.name %>!</h1>
+    <%end %>
+   
