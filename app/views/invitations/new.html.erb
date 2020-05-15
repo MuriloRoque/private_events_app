@@ -1,0 +1,4 @@
+<%= form_for(@invitation) do |f| %>
+User: <%= f.text_field :attendee_id, placeholder: "Please enter the user's ID" %><br><br>
+	<%= f.submit 'Invite' %>
+<% end %>
