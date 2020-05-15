@@ -1,4 +1,4 @@
-<%= form_for @user do |f| %> 
-E-mail : <%= f.email_field :email, placeholder: 'example@example.com' %><br><br>
+<%= form_for :session, url: login_path do |f| %> 
+Name : <%= f.text_field :name, placeholder: 'Your name here' %><br><br>
 <%= f.submit %>
 <% end %> 
