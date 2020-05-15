@@ -1,5 +1,7 @@
 <% @events.each do | event | %>
 	<strong><%= event.creator.name %>: </strong>
   <p><%= event.date %></p>
-  <p><%= event.description %></p>
+  <%= link_to event do %>
+    <p><%= event.description %></p>
+  <% end %>
 <% end %>
