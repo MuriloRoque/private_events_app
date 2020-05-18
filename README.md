@@ -47,7 +47,7 @@ Aremu Lucky
 - Twitter: [@twitterhandle](@luckyaremu)
 - Linkedin: [linkedin](https://www.linkedin.com/in/lucky-aremu-24807a145/)
 
-## 🤝 Contributing
+## 🤝 Contributing 
 
 Contributions, issues and feature requests are welcome! Start by:
 
