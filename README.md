@@ -47,6 +47,12 @@ Aremu Lucky
 - Twitter: [@twitterhandle](@luckyaremu)
 - Linkedin: [linkedin](https://www.linkedin.com/in/lucky-aremu-24807a145/)
 
+👤 **Author2**
+Murilo Roque Paiva da Silva
+- Github: [@muriloroque](https://github.com/MuriloRoque)
+- Twitter: [@MuriloRoquePai1](https://twitter.com/MuriloRoquePai1)
+- Linkedin: [MuriloRoque](https://www.linkedin.com/in/murilo-roque-b1268741/)
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome! Start by:
