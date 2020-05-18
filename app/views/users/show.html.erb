@@ -1,3 +1,6 @@
+<div class="flex">
+<div>
+  <h1>Events you are hosting</h1>
 <% current_user.events.each do | event | %>
 	<strong><%= event.creator.name %>: </strong>
   <p><%= event.date %></p>
@@ -5,3 +8,8 @@
     <p><%= event.description %></p>
   <% end %>
 <% end %>
+</div>
+<div>
+  <h1>Events you are attending</h1> <br> <br>
+</div>
+</div>
