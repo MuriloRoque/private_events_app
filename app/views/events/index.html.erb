@@ -1,4 +1,5 @@
 <div class = "flex">
+  <fieldset class="field-danger">
   <div>
     <h1 class="danger">Past</h1>
     <% @past.each do | event | %>
@@ -9,8 +10,10 @@
       <% end %>
     <% end %>
   </div>
+</fieldset>
+  <fieldset class="field">
   <div>
-    <h1>Upcoming</h1>
+    <h1 class="warm">Upcoming</h1>
     <% @upcoming.each do | event | %>
       <strong><%= event.creator.name %>: </strong>
       <p><%= event.date %></p>
@@ -19,4 +22,5 @@
       <% end %>
     <% end %>
   </div>
+</fieldset>
 </div>

@@ -1,5 +1,9 @@
+<div class="details">
 <%= form_for @user do |f| %> 
 Username: <%= f.text_field :name, placeholder: 'Your name here' %><br><br>
-E-mail : <%= f.email_field :email, placeholder: 'example@example.com' %><br><br>
+<div class="set-signup">
+E-mail: <%= f.email_field :email, placeholder: 'example@example.com' %><br><br>
+</div>
 <%= f.submit %>
 <% end %> 
+</div>
