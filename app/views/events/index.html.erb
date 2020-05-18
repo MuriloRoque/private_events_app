@@ -1,7 +1,22 @@
-<% @events.each do | event | %>
-	<strong><%= event.creator.name %>: </strong>
-  <p><%= event.date %></p>
-  <%= link_to event do %>
-    <p><%= event.description %></p>
-  <% end %>
-<% end %>
+<div class = "flex">
+  <div>
+    <h1>Past</h1>
+    <% @past.each do | event | %>
+      <strong><%= event.creator.name %>: </strong>
+      <p><%= event.date %></p>
+      <%= link_to event do %>
+        <p><%= event.description %></p>
+      <% end %>
+    <% end %>
+  </div>
+  <div>
+    <h1>Upcoming</h1>
+    <% @upcoming.each do | event | %>
+      <strong><%= event.creator.name %>: </strong>
+      <p><%= event.date %></p>
+      <%= link_to event do %>
+        <p><%= event.description %></p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
