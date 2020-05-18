@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-  
   def index
     @past = Event.created_before(Date.today).order('date desc')
     @upcoming = Event.upcoming_events(Date.today).order('date asc')
@@ -25,9 +24,8 @@ class EventsController < ApplicationController
   end
 
   private
-   
+
   def event_params
     params.require(:event).permit(:date, :description)
   end
-
 end

@@ -1,7 +1,7 @@
 <div class = "flex">
   <div>
     <h1>Events you are hosting</h1>
-    <h2>Past</h2>
+    <h2 class="danger">Past</h2>
     <% @past_user.each do | event | %>
       <strong><%= event.creator.name %>: </strong>
       <p><%= event.date %></p>
@@ -20,7 +20,7 @@
   </div>
   <div>
     <h1>Events you are attending</h1>
-    <h2>Past</h2>
+    <h2 class="danger">Past</h2>
     <% @past.each do | event |%>
       <% if event.attendee_ids.include?(current_user.id) %>
         <strong><%= event.creator.name %>: </strong>

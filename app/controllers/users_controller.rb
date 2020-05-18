@@ -1,12 +1,11 @@
 class UsersController < ApplicationController
-
   def create
     @user = User.new(user_params)
     if @user.save
       log_in(@user)
-        redirect_to root_path
-      else
-        render :new
+      redirect_to root_path
+    else
+      render :new
     end
   end
 
@@ -22,11 +21,10 @@ class UsersController < ApplicationController
     @past = Event.all.created_before(Date.today).order('date desc')
     @upcoming = Event.all.upcoming_events(Date.today).order('date asc')
   end
-  
+
   private
-   
+
   def user_params
     params.require(:user).permit(:name, :email)
   end
-
 end

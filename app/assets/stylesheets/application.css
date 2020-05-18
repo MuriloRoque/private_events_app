@@ -18,6 +18,9 @@
    display: flex;
    justify-content: space-around;
  }
+ .danger {
+   color: red;
+ }
 
  body {
    background-color: rgba(60, 141, 207, 0.63);
