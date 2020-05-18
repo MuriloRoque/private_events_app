@@ -18,3 +18,7 @@
    display: flex;
    justify-content: space-around;
  }
+
+ body {
+   background-color: rgba(60, 141, 207, 0.63);
+ }

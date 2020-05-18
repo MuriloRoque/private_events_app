@@ -1,4 +1,7 @@
 <%= form_for(@invitation) do |f| %>
-User: <%= f.text_field :attendee_id, placeholder: "Please enter the user's ID" %><br><br>
+	<%= f.hidden_field :host_id, value: current_user.id %>
+	<%= f.hidden_field :attended_event_id, value: current_user.events[0][:id] %>
+	User: <%= f.text_field :attendee_id, placeholder: "Please enter the user's ID" %><br><br>
 	<%= f.submit 'Invite' %>
+	<p><%= current_user.events[0][:id] %></p>
 <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_14_122538) do
+ActiveRecord::Schema.define(version: 2020_05_18_090951) do
 
   create_table "events", force: :cascade do |t|
     t.datetime "date"
@@ -35,4 +35,8 @@ ActiveRecord::Schema.define(version: 2020_05_14_122538) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "events", "users", column: "creator_id"
+  add_foreign_key "invitations", "events", column: "attended_event_id"
+  add_foreign_key "invitations", "users", column: "attendee_id"
+  add_foreign_key "invitations", "users", column: "host_id"
 end

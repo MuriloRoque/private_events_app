@@ -6,4 +6,10 @@
 </p>
 <br>
 
-<%= link_to "Invite", new_invitation_path %>
+<%= render 'shared/invite_form'%>
+<br>
+<h1>Invited people: </h1><br>
+<% @attendee.each do  | invitation | %>
+  <%= invitation.name %><br><br>
+<% end %>
+

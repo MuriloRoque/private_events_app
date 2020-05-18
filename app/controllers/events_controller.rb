@@ -18,7 +18,9 @@ class EventsController < ApplicationController
   end
 
   def show
+    @invitation = current_user.invitations.build
     @event = Event.find(params[:id])
+    @attendee = @event.attendees
   end
 
   private

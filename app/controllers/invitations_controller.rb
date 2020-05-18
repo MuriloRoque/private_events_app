@@ -4,7 +4,6 @@ class InvitationsController < ApplicationController
   end
   
   def create
-    @users = User.all.order('created_at DESC')
     @invitation = current_user.invitations.build(invitation_params)
     if @invitation.save
       flash[:success] = 'Invitation sent!'
