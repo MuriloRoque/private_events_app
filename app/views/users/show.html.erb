@@ -1,15 +1,24 @@
-<div class="flex">
-<div>
-  <h1>Events you are hosting</h1>
-<% current_user.events.each do | event | %>
-	<strong><%= event.creator.name %>: </strong>
-  <p><%= event.date %></p>
-  <%= link_to event do %>
-    <p><%= event.description %></p>
-  <% end %>
-<% end %>
-</div>
-<div>
-  <h1>Events you are attending</h1> <br> <br>
-</div>
+<div class = "flex">
+  <div>
+    <h1>Events you are hosting</h1>
+    <% current_user.events.each do | event | %>
+      <strong><%= event.creator.name %>: </strong>
+      <p><%= event.date %></p>
+      <%= link_to event do %>
+        <p><%= event.description %></p>
+      <% end %>
+    <% end %>
+  </div>
+  <div>
+    <h1>Events you are attending</h1>
+    <% @events.each do | event |%>
+      <% if event.attendee_ids.include?(current_user.id) %>
+        <strong><%= event.creator.name %>: </strong>
+        <p><%= event.date %></p>
+        <%= link_to event do %>
+        <p><%= event.description %></p>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
