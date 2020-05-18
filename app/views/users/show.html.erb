@@ -1,7 +1,16 @@
 <div class = "flex">
   <div>
     <h1>Events you are hosting</h1>
-    <% current_user.events.each do | event | %>
+    <h2>Past</h2>
+    <% @past_user.each do | event | %>
+      <strong><%= event.creator.name %>: </strong>
+      <p><%= event.date %></p>
+      <%= link_to event do %>
+        <p><%= event.description %></p>
+      <% end %>
+    <% end %>
+    <h2>Upcoming</h2>
+    <% @upcoming_user.each do | event | %>
       <strong><%= event.creator.name %>: </strong>
       <p><%= event.date %></p>
       <%= link_to event do %>
@@ -11,7 +20,18 @@
   </div>
   <div>
     <h1>Events you are attending</h1>
-    <% @events.each do | event |%>
+    <h2>Past</h2>
+    <% @past.each do | event |%>
+      <% if event.attendee_ids.include?(current_user.id) %>
+        <strong><%= event.creator.name %>: </strong>
+        <p><%= event.date %></p>
+        <%= link_to event do %>
+        <p><%= event.description %></p>
+        <% end %>
+      <% end %>
+    <% end %>
+    <h2>Upcoming</h2>
+    <% @upcoming.each do | event |%>
       <% if event.attendee_ids.include?(current_user.id) %>
         <strong><%= event.creator.name %>: </strong>
         <p><%= event.date %></p>

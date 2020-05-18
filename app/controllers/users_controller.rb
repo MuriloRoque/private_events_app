@@ -17,7 +17,10 @@ class UsersController < ApplicationController
   def show
     @invitation = current_user.invitations.build
     @user = User.find(params[:id])
-    @events = Event.all
+    @past_user = current_user.events.created_before(Date.today).order('date desc')
+    @upcoming_user = current_user.events.upcoming_events(Date.today).order('date asc')
+    @past = Event.all.created_before(Date.today).order('date desc')
+    @upcoming = Event.all.upcoming_events(Date.today).order('date asc')
   end
   
   private
