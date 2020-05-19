@@ -49,7 +49,22 @@
   
 }
 .set{
-  padding-left: 23px;
+  margin-left: 23px;
+  padding-left: 85px;
+}
+.text-area{
+  padding-left: 60px;
+}
+.event-button{
+  margin-left: 70px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: blue;
+  border: 0;
+}
+.event-button:hover{
+  padding: 13px;
+  background-color: orangered;
 }
 .details{
   text-align: center;
