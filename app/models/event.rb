@@ -10,5 +10,5 @@ class Event < ApplicationRecord
     where('date > ?', time)
   end
   validates :date, presence: true
-  validates :description, presence: true, length: {maximum: 300}
+  validates :description, presence: true, length: { maximum: 300 }
 end

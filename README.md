@@ -13,7 +13,8 @@ In this project, A user can create events, and can also attend many events. An e
 - Implemented basic OOP principles;
 - Have an organized project structure;
 - Used common Ruby patterns;
-- Chose a simple solution over a more complex one.
+- Chose a simple solution over a more complex one;
+- Used RSpec with Capybara to test the models and requests.
 
 ## Built With
 
@@ -23,6 +24,7 @@ In this project, A user can create events, and can also attend many events. An e
 - Linters 
 - HTML
 - SASS
+- RSpec
 
 ### Setup
 - Clone the project to your local machine;
@@ -32,6 +34,12 @@ In this project, A user can create events, and can also attend many events. An e
 - Run rails s to start a server in your computer;
 - In your browser address, type the following URL: localhost:3000;
 - Enjoy the App and its functionalities!
+
+### Testing
+- Run rspec spec/models/'testname'_spec.rb to run each model test;
+- Run rspec spec/requests/'testname'_spec.rb to run each request test.
+
+Obs.: Substitute 'testname' for the name you want to test.
 
 ### Install
 
