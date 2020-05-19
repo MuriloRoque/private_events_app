@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   def index
-    @past = Event.created_before(Date.today).order('date desc')
-    @upcoming = Event.upcoming_events(Date.today).order('date asc')
+    @past = Event.all.past.order('date desc')
+    @upcoming = Event.all.upcoming.order('date asc')
   end
 
   def create
