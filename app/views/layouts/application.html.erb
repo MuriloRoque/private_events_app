@@ -10,6 +10,35 @@
   </head>
 
   <body>
+    <nav class = "flex">
+      <%= link_to root_path do %>
+          <h1>Home</h1>
+      <% end %>
+
+      <% if sign_in? %>
+      
+      <%= link_to current_user do %>
+          <h2>My profile</h2>
+      <% end %>
+      <%= link_to new_event_path do %>
+          <h2>Create event</h2>
+      <% end %>
+      <%= link_to events_path do %>
+          <h2>Show events</h2>
+      <% end %>
+      <%= link_to logout_path, method: :delete do %>
+      <h2>Log out</h2>
+      <% end %>
+      <% else %>
+      <%= link_to login_path do %>
+          <h2>Sign in</h2>
+      <% end %>
+      <%= link_to new_user_path do %>
+          <h2>Sign up</h2>
+      <% end %>
+    <% end %>
+    </nav>
+    
     <%= yield %>
   </body>
 </html>

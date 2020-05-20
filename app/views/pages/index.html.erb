@@ -1,0 +1,14 @@
+   <div>
+    <div class="home-page">
+   <% if current_user %>
+     <h1>Welcome to Events planner, <%= current_user.name %>!</h1>
+   <%else %>
+    </div>
+     <div class="index-page">
+     <h1>Welcome to Events planner</h1>
+     <h4>Home where we help you plan your events and invite all your guest as you want.</h4>
+     <h2>To use event planner, kindly register</h2>
+    </div>
+<% end %>
+</div>
+   

@@ -1,0 +1,8 @@
+<div class="text-input">
+<%= form_for @event do |f| %> 
+Date: <%= f.date_field :date, placeholder: "Your event's date", class: 'set' %><br><br>
+Description: <%= f.text_area :description, placeholder: 'Your description', class: 'text-area', cols: 23, rows: 10 %><br><br>
+<%= f.submit class: 'event-button' %>
+<% end %> 
+
+</div>

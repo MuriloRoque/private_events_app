@@ -1,0 +1,17 @@
+<p>
+  <strong>Host</strong>
+  <%= @event.creator.name %> <br> <br>
+  <strong>Date:</strong>
+  <%= @event.date %><br><br>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+<br>
+
+<%= render 'shared/invite_form'%>
+<br>
+<h1>Invited people: </h1><br>
+<% @attendee.each do  | invitation | %>
+  <%= invitation.name %><br><br>
+<% end %>
+

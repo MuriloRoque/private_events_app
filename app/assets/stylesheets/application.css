@@ -13,3 +13,82 @@
  *= require_tree .
  *= require_self
  */
+
+ .flex {
+   display: flex;
+   justify-content: space-around;
+ }
+ .danger {
+   color:orangered;
+ }
+
+ .warm {
+   color: green;
+ }
+.field{
+  width: 100%;
+  background-color: darkgray;
+}
+.field-danger{
+  background-color: rgb(233, 176, 169);
+  width: 100%;
+}
+.field-warm{
+  background-color: rgb(233, 232, 236);
+  width: 100%;
+}
+.text-input{
+  text-align: center;
+  width: 100%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  border-style: solid;
+  border-color: salmon;
+  font-weight: bold;
+  background-color: darkgray;
+  
+}
+.set{
+  margin-left: 23px;
+  padding-left: 85px;
+}
+.text-area{
+  padding-left: 60px;
+}
+.event-button{
+  margin-left: 70px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: blue;
+  border: 0;
+}
+.event-button:hover{
+  padding: 13px;
+  background-color: orangered;
+}
+.details{
+  text-align: center;
+  width: 100%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  font-weight: bold;
+}
+.index-page {
+text-align: center;
+background-color: rgba(19, 16, 34, 0.384);
+font-style: italic;
+color: rgb(200, 150, 200);
+font-size: 20px;
+font-size: 30px;
+}
+.home-page{
+  text-align: center;
+  font-style: italic;
+  font-size: 40px;
+}
+.set-signup{
+  padding-left: 20px;
+}
+ body {
+   background-color: rgba(60, 141, 207, 0.63);
+ }
