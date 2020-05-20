@@ -1,0 +1,48 @@
+<div class = "flex">
+  <fieldset class="field-warm">
+  <div>
+    <h1>Events you are hosting</h1>
+    <h2 class="danger">Past</h2>
+    <% @past_user.each do | event | %>
+      <strong><%= event.creator.name %>: </strong>
+      <p><%= event.date %></p>
+      <%= link_to event do %>
+        <p><%= event.description %></p>
+      <% end %>
+    <% end %>
+    <h2 class="warm">Upcoming</h2>
+    <% @upcoming_user.each do | event | %>
+      <strong><%= event.creator.name %>: </strong>
+      <p><%= event.date %></p>
+      <%= link_to event do %>
+        <p><%= event.description %></p>
+      <% end %>
+    <% end %>
+  </div>
+</fieldset>
+  <fieldset class="field">
+  <div>
+    <h1>Events you are attending</h1>
+    <h2 class="danger">Past</h2>
+    <% @past.each do | event |%>
+      <% if event.attendee_ids.include?(current_user.id) %>
+        <strong><%= event.creator.name %>: </strong>
+        <p><%= event.date %></p>
+        <%= link_to event do %>
+        <p><%= event.description %></p>
+        <% end %>
+      <% end %>
+    <% end %>
+    <h2 class="warm">Upcoming</h2>
+    <% @upcoming.each do | event |%>
+      <% if event.attendee_ids.include?(current_user.id) %>
+        <strong><%= event.creator.name %>: </strong>
+        <p><%= event.date %></p>
+        <%= link_to event do %>
+        <p><%= event.description %></p>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</fieldset>
+</div>

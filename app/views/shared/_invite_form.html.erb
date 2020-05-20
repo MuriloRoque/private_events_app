@@ -1,0 +1,8 @@
+<%= form_for(@invitation) do |f| %>
+  <% if current_user.id == @event.creator_id %>
+	  <%= f.hidden_field :host_id, value: current_user.id %>
+	  <%= f.hidden_field :attended_event_id, value: @event.id %>
+	  User: <%= f.collection_select :attendee_id, User.all, :id, :name, placeholder: "Please enter the user's ID" %><br><br>
+	  <%= f.submit 'Invite' %>
+  <% end %>
+<% end %>
