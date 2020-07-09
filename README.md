@@ -1,8 +1,12 @@
-> #Private events
+[![hire-badge](https://img.shields.io/badge/Consult%20/%20Hire%20Murilo-Click%20to%20Contact-brightgreen)](mailto:muriloengqui@gmail.com) [![Twitter Follow](https://img.shields.io/twitter/follow/MuriloRoquePai1?label=Follow%20Murilo%20on%20Twitter&style=social)](https://twitter.com/MuriloRoquePai1)
 
-In this project, A user can create events, and can also attend many events. An event can be attended by many users.
+# Private events App
 
-## Start-ups
+![screenshot](images/screenshot.png)
+
+In this project, a user can create events, and can also attend many events. An event can be attended by many users.
+
+In this project, we:
 
 - Used Ruby to implement a private events clone webpage;
 - Used HTML and SASS;
@@ -26,26 +30,21 @@ In this project, A user can create events, and can also attend many events. An e
 - SASS
 - RSpec
 
-### Setup
+## Getting Started
+
 - Clone the project to your local machine;
-- cd into the project directory;
-- Run bundle install to install the necessary gems;
-- Run rails db:migrate to create your database columns;
-- Run rails s to start a server in your computer;
-- In your browser address, type the following URL: localhost:3000;
+- `cd` into the project directory;
+- Run `bundle install` to install the necessary gems;
+- Run `rails db:create`;
+- Run `rails db:migrate`;
+- Run `rails s` to start a server in your computer;
+- In your browser address, type the following URL: [localhost:3000](localhost:3000);
 - Enjoy the App and its functionalities!
 
-### Testing
-- Run rspec spec/models/'testname'_spec.rb to run each model test;
-- Run rspec spec/requests/'testname'_spec.rb to run each request test.
+## Running RSpec tests
 
-Obs.: Substitute 'testname' for the name you want to test.
-
-### Install
-
-- Install VSCode or any code editor you like
-- Install Node JS and nmp(most recents versions)
-- Run this command on your terminal in order to install stylelint: npm install stylelint stylelint-config-recommended --save-dev
+- `cd` into the project directory;
+- Run `bundle exec rspec`.
 
 ## Authors
 
@@ -80,5 +79,3 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - (https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
-
-## 📝 License
